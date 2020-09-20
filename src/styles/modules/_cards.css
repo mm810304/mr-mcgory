@@ -1,0 +1,102 @@
+.card {
+    background-color: var(--off-white);
+    display: grid;
+    grid-template-rows: 5vh minmax(min-content, 20vh) 1fr;
+    height: 100%;
+    row-gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2rem 4rem rgba(0,0,0,.4);
+    cursor: pointer;
+}
+
+.card__link {
+    text-decoration: none;
+}   
+
+.card:hover {
+    filter: brightness(105%);
+    box-shadow: 0 2rem 4rem rgba(0,0,0,.2);
+}
+
+.card:hover > .card__title {
+    color: var(--primary-blue);
+}
+
+.card__title {
+    font-family: var(--quote-font);
+    font-size: 3rem;
+    text-align: center;
+    color: var(--off-white);
+    transform: rotate(-2deg) translateY(-15px);
+}
+
+.card__description {
+    font-size: 1.8rem;
+    align-self: flex-end;
+    line-height: 1.5;
+    color: black;
+    margin: 0 2rem;
+}
+
+.card__image {
+    max-width: 45%;
+    justify-self: center;
+    align-self: center;
+}
+
+/*Lesson Cards */
+.lesson-card {
+    min-height: 30rem;
+    background-color: var(--off-white);
+    box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+    transition: 0.5s ease;
+    cursor: pointer;
+    backface-visibility: hidden;
+
+    display: grid;
+    grid-template-rows: 3fr .75fr minmax(min-content, 1fr);
+}
+
+.lesson-card__image {
+    width: 90%;
+    height: 90%;
+    justify-self: center;
+    align-self: center;
+}
+
+.lesson-card__title {
+    font-family: var(--quote-font);
+    font-size: 3.5rem;
+    font-weight: 700;
+    align-self: flex-start;
+    padding: 1rem 1.5rem;
+    color: var(--text-content-gray);
+}
+
+.lesson-card__description {
+    font-size: 1.6rem;
+    align-self: flex-start;
+    padding: 0 1.5rem 1rem 1.5rem;
+    color: var(--text-content-gray);
+    align-self: flex-start;
+}
+
+.lesson-card:hover  {
+    filter: brightness(105%);
+    box-shadow: 0 2rem 4rem rgba(0,0,0,.2);
+    background: var(--primary-blue);
+}
+
+.lesson-card:hover > .lesson-card__title {
+    color: var(--off-white);
+}
+
+.lesson-card:hover > .lesson-card__description {
+    color: var(--off-white);
+}
+
+.lesson-card:hover > .lesson-card__image {
+    color: var(--off-white);
+}
+

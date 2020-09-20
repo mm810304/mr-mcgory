@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+        <link rel="stylesheet" href="/dist/styles.min.css"> 
+        <title><%= category %></title>
+    </head>
+    <body class="blue-bg">
+        <div class="wrapper">
+            <%- include('../partials/nav') %>
+            <header class="category-header">
+                <h1 class="category-header__title"><%= category %></h1>
+                <p class="category-header__description"><%= description %></p>
+            </header>
+
+            <main class="category-page-container">
+
+                <div class="lesson-card-container">
+                    <% lessons.forEach(lesson => { %>
+                        <a class="lesson-card-link" href="<%= lesson.url %>/<%= lesson._id %>"><div class="lesson-card">
+                            <img src="svg/<%= lesson.image %>" class="lesson-card__image">
+                            <h2 class="lesson-card__title"><%= lesson.title %></h2>
+                            <p class="lesson-card__description"><%= lesson.description %></p>
+                        </div></a>
+                    <% }); %>
+                </div>
+            </main>
+
+            <%- include('../partials/footer') %>
+        </div>
+    </body>
+</html>

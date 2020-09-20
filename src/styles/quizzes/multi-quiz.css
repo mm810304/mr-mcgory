@@ -1,0 +1,237 @@
+.quiz-container {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-blue);
+}
+
+.quiz {
+    background-color: var(--off-white);
+    width: 100vw;
+    max-width: 110rem;
+    height: 90vh;
+    max-height: 75rem;
+    border-radius: 10px;
+}
+
+.quiz__header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.quiz__title {
+    font-size: 2.4rem;
+}
+
+.tracker {
+    align-self: center;
+    background-color: var(--very-light-blue);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.tracker-current {
+    background-color: var(--current-item);
+}
+
+.tracker__numbers {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: var(--slate-gray);
+    color: var(--off-white);
+    text-align: center;
+    margin: 1rem;
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3rem 4rem 3rem;
+}
+
+.question {
+    margin-bottom: 4rem;
+}
+
+.question__text {
+    font-size: 2.8rem;
+    justify-self: flex-start;
+    color: var(--black);
+}
+
+.answers  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.answer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: var(--off-white);
+}
+
+.answer:hover  {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.answer:checked {
+    background-color: var(--wrong-answer);
+}
+
+.answer__prefix {
+    padding: 1.1rem 2rem;
+    margin-right: 2rem;
+    align-self: flex-start;
+    height: 100%;
+    background-color: var(--slate-gray);
+    color: white;
+}
+
+.answer__text {
+    padding: 1.5rem;
+    width: 100%;
+    font-size: 2.4rem;
+}
+
+input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    height: 2rem;
+    padding: 1.5rem;
+}
+  
+.answer__text {
+    text-align: left;
+    cursor: inherit;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+  }
+
+.answer__option-text {
+    font-size: 2.4rem;
+} 
+
+.check-answer-response {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.check-answer-response__text {
+    font-size: 2.4rem;
+}
+
+.right-answer {
+    color: var(--right-answer);
+}
+
+.wrong-answer {
+    color: var(--wrong-answer);
+}
+
+@media (max-width: 1200px) {
+    .quiz {
+        width: 90%;
+        height: 85vh;
+    } 
+}
+
+@media (max-width: 850px) {
+    .quiz {
+        width: 95%;
+        height: 90vh;
+    } 
+    
+    .question {
+        margin-bottom: 2.5rem;
+    }
+    
+    .question__text {
+        font-size: 2.4rem;
+    }
+
+    .tracker {
+        margin-bottom: 3rem;
+    }
+    
+    .tracker__numbers {
+        width: 4rem;
+        height: 4rem;
+        font-size: 2.2rem;
+        margin: 1rem .5rem;
+    }
+
+    .check-answer-response {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+    
+    .check-answer-response__text {
+        font-size: 2.4rem;
+    }
+    
+    .answer__option-text {
+        font-size: 2rem;
+    } 
+}
+
+@media (max-width: 500px) {
+    .quiz {
+        width: 100%;
+        height: 95vh;
+    } 
+
+    .question__text {
+        font-size: 2rem;
+    }
+
+    .tracker {
+        margin-bottom: 2rem;
+    }
+
+    .tracker__numbers {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.8rem;
+        margin: 1rem .2rem;
+    }
+
+    .answer__option-text {
+        font-size: 1.6rem;
+    } 
+
+    .check-answer-response {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+    
+    .check-answer-response__text {
+        font-size: 2rem;
+    }
+}

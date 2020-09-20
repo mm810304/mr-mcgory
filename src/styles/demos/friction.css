@@ -1,0 +1,14 @@
+.slider-container__friction {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.friction-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: .5rem;
+}

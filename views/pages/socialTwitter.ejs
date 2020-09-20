@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/styles.min.css">
+    <title><%= lesson.title %></title>
+</head>
+<body class="social-media--bg">
+    <div class="home-logo">
+        <%- include('../partials/homeLinkWhiteText') %>
+    </div>
+
+    <div class="social-media__container">
+
+        <div class="social-media__header">
+            <h1 class="social-media__title"><%= lesson.title %></h1>
+            <h4 class="social-media__subtitle"><%= lesson.description %></h4>
+        </div>
+    
+        <div class="social-media__tweet-container" id="tweet-container">
+            <a class="twitter-timeline" href="<%= lesson.link %>"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    
+    </div>
+</body>

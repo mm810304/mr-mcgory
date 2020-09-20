@@ -1,0 +1,19 @@
+.highlighter {
+    background-color: var(--light-reddish-brown);
+    padding: 1rem;
+    box-shadow: .75rem .75rem .75rem rgba(0,0,0,.25);
+    font-family: var(--quote-font);
+}
+
+.highlight__quiz-answer {
+    background-color: var(--bright-blue);
+}
+
+.highlight-right {
+    background-color: var(--right-answer);
+}
+
+.highlight-wrong {
+    background-color: var(--wrong-answer);
+}
+

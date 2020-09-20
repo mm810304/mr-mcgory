@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/styles.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
+
+    <title><%= activity.title %></title>
+</head>
+<body>
+    <div class="demo-page-container">
+        <div class="home-logo">
+            <%- include('../partials/homeLinkBlueText') %>
+        </div>
+        
+        <div class="demo-title" id="demo-title"><%= activity.title %></div>;
+    
+        <div class="demo-wrapper" id="demo-wrapper"></div>
+
+        <div class="questions-and-controls">
+            <div class="demo-questions">
+                <h4 class="demo-questions__text"></h4>
+                <div class="demo-questions__buttons">
+                    <button class="demo-btn" id="prev-btn">Previous</button>
+                    <button class="demo-btn" id="next-btn">Next</button>
+                </div>
+            </div>
+            <div class="controls" id="controls"></div>
+        </div>
+    </div>
+
+    <script src="./../dist/demo.bundle.js" type="module"></script>
+</body>  
+</html>

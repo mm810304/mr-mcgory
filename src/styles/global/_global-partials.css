@@ -1,0 +1,100 @@
+
+
+/*Mid-Page Quotes*/
+
+.quote {
+    grid-column: 2 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote__text {
+    color: var(--off-white);
+    font-size: 6rem;
+    font-family: var(--quote-font);
+    text-align: center;   
+    margin: 2rem .5rem;
+}
+
+/*Footer*/
+
+.footer {
+    background-color: var(--off-white);
+    height: 15vh;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__list {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.footer__item, .footer__item a {
+    font-family: var(--main-font);
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.footer__logo-container {
+    font-family: var(--quote-font);
+    font-size: 4rem;
+    padding: .5rem 5rem;
+}
+
+.footer__logo {
+    text-decoration: none;
+    color: var(--primary-blue);
+    text-transform: none;
+}
+
+@media (max-width: 1100px) {
+    .quote__text {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .quote__text {
+        font-size: 3.5rem;
+    }
+
+    .footer__list {
+        width: 90%;   
+    }
+    
+    .footer__item, .footer__item a {
+        font-size: 1.8rem;
+    }
+    
+    .footer__logo-container {
+        font-size: 3.5rem;
+        padding: .5rem 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__list {
+        width: 100%;   
+    }
+    
+    .footer__item, .footer__item a {
+        font-size: 1.6rem;
+    }
+    
+    .footer__logo-container {
+        font-size: 2.5rem;
+        padding: .5rem 1.5rem;
+    }
+}

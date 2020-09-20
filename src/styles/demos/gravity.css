@@ -1,0 +1,17 @@
+.gravity-slider {
+    width: 85%;
+}
+
+.gravity-slider__label {
+    font-size: 1.2rem;
+}
+
+.gravity-slider__current {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 700px) {   
+    .gravity-slider {
+        width: 85%;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/styles.min.css">
+    <title><%= title %></title>
+</head>
+<body class="blue-bg">
+    <%- include('../partials/homeLinkWhiteText') %>
+
+    <div class="quiz-container">
+        
+        <div class="quiz hidden">
+ 
+            <header class="quiz__header">
+                 <h2 class="quiz__title"><%= title %></h2>
+            </header>
+ 
+            <div class="tracker" id="tracker">
+                <div class="tracker__numbers" id="number1">1</div>
+                <div class="tracker__numbers" id="number2">2</div>
+                <div class="tracker__numbers" id="number3">3</div>
+                <div class="tracker__numbers" id="number4">4</div>
+                <div class="tracker__numbers" id="number5">5</div>
+                <div class="tracker__numbers" id="number6">6</div>
+                <div class="tracker__numbers" id="number7">7</div>
+                <div class="tracker__numbers" id="number8">8</div>
+                <div class="tracker__numbers" id="number9">9</div>
+                <div class="tracker__numbers" id="number10">10</div>
+            </div>
+ 
+             <div class="quiz-box">
+                 <div class="question">
+                     <h2 class="question__text" id="question"></h2>
+                 </div>
+                
+                 <div class="answers">
+                     <div class="answer">
+                         <input type="radio" id="option1" name="answer" value="option1">
+                         <label class="answer__text" for="option1"><span class="answer__prefix">A</span><span id="option1-text" class="answer__option-text"></span></label>
+                     </div>
+                     <div class="answer">
+                         <input type="radio" id="option2" name="answer" value="option2">
+                         <label class="answer__text" for="option2"><span class="answer__prefix">B</span><span id="option2-text" class="answer__option-text"></span></label>
+                     </div>
+                     <div class="answer">
+                         <input type="radio" id="option3" name="answer" value="option3">
+                         <label class="answer__text" for="option3"><span class="answer__prefix">C</span><span id="option3-text" class="answer__option-text"></span></label>
+                     </div>
+                     <div class="answer">
+                         <input type="radio" id="option4" name="answer" value="option4">
+                         <label class="answer__text" for="option4"><span class="answer__prefix">D</span><span id="option4-text" class="answer__option-text"></span></label>
+                     </div>
+                 </div>
+ 
+             <div class="control-btns">
+                 <button id="check-answer-btn" class="btn btn-border-pop">Check Answer</button>
+                 <button id="next-question-btn" class="btn btn-border-pop hidden">Next Question Please</button>
+                 <button id="retake-quiz-btn" class="btn btn-border-pop hidden">Take the Quiz Again</button>
+                 <a href="/quizzes"><button id="quiz-home-btn" class="btn btn-border-pop hidden">See All Quizzes</button></a>
+             </div>
+ 
+         <div id="correct-wrong" class="check-answer-response">
+             <h2 class="check-answer-response__text"></h2>
+         </div> 
+        </div>
+    </div>
+       
+   <script src="./../dist/multiquiz.bundle.js" type="module"></script>
+</body>
+    
+</html>

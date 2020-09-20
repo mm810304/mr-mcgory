@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/styles.min.css">
+    <title><%= title %></title>
+</head>
+<body class="web-quiz__body">
+    <%- include('../partials/homeLinkBlueText') %>
+
+    <div class="web-quiz__container">
+        <div class="web-quiz__question-tracker" id="tracker">
+            <div class="tracker" id="tracker1">1</div>
+            <div class="tracker" id="tracker2">2</div>
+            <div class="tracker" id="tracker3">3</div>
+            <div class="tracker" id="tracker4">4</div>
+            <div class="tracker" id="tracker5">5</div>
+            <div class="tracker" id="tracker6">6</div>
+            <div class="tracker" id="tracker7">7</div>
+            <div class="tracker" id="tracker8">8</div>
+            <div class="tracker" id="tracker9">9</div>
+            <div class="tracker" id="tracker10">10</div>
+            <div class="tracker" id="tracker11">11</div>
+            <div class="tracker" id="tracker12">12</div>
+            <div class="tracker" id="tracker13">13</div>
+            <div class="tracker" id="tracker14">14</div>
+            <div class="tracker" id="tracker15">15</div>            
+        </div>
+
+        <div class="web-quiz__quiz">
+            <h2 class="web-quiz__question" id="question-text"></h1>
+            <input type="text" class="web-quiz__text-input" id="text-input" autocomplete="off">
+            <div class="web-quiz__btn-container">
+                <button class="web-quiz__btn" id="check-answer-btn">Check Answer</button>
+                <button class="web-quiz__btn" id="skip-question-btn">Skip Question</button>
+                <button class="web-quiz__btn" id="next-question-btn" hidden>Next Question</button>
+                <button class="web-quiz__btn" id="retake-quiz-btn" hidden>Retake Quiz</button>
+                <button class="web-quiz__btn" id="return-quiz-page-btn" hidden>See More Quizzes</button>
+            </div>
+        </div>
+
+        <div class="web-quiz__answer-box">
+            <h2 class="web-quiz__answer-result" id="answer-result"></h2>
+            <div class="correctCode">
+                <h4 class="web-quiz__correct-answer-heading" id="correct-answer-heading" hidden>The Correct Answer:</h4>
+                <h3 class="web-quiz__correct-answer" id="correct-answer"></h4>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./../dist/webquiz.bundle.js" type="module"></script>
+
+</body>
+</html>

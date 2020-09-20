@@ -1,0 +1,86 @@
+.controls-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    position: relative;
+    border: none;
+    background-color: var(--very-light-blue);
+    padding: 1.5rem;
+    color: var(--black);
+    font-weight: 300;
+    outline: none;
+    font-size: 2rem;
+    width: 25rem;
+    margin: 1rem;
+    cursor: pointer;
+
+    --border-size: 2px;
+}
+
+.btn.btn-border-pop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--very-light-blue);
+    transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.btn.btn-border-pop:hover::before,
+.btn.btn-border-pop:focus::before {
+    top: calc(var(--border-size) * -3);
+    left: calc(var(--border-size) * -3);
+    right: calc(var(--border-size) * -3);
+    bottom: calc(var(--border-size) * -3);
+}
+
+/*Demo Buttons*/
+.demo-btn {
+        cursor: pointer;
+        border: 2px solid #9cb2c9;
+        border-radius: 50px;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        background-color: var(--off-white);
+        color: var(--slate-gray);
+        font-weight: 300;
+        font-size: 1.8rem;
+        width: 20rem;
+        height: 3.5rem;
+        margin: 1rem;
+        outline: none;
+        transition: all .2s;
+}
+
+.demo-btn:hover,
+.demo-btn:active {
+    background: linear-gradient(#9cb3c9,#bdccdb);
+    color: #fff;
+}
+
+.demo-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 800px) {
+    .demo-btn {
+        width: 15rem;
+        height: 3rem;
+        margin: .5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .demo-btn {
+        width: 15rem;
+        height: 3rem;
+        margin: .1rem;
+    }
+}
+
+
+

@@ -1,0 +1,101 @@
+{
+    "category": "Review Quizzes",
+    "quizType": "Multiple Choice",
+    "subject": "Chemistry",
+    "title": "Dummy Quiz 1",
+    "description": "A practice quiz to get the basic functionality right",
+    "url": "/review-quizzes",
+    "image": null,
+    "questionsAndAnswers": [
+        {
+            "question": "What is 2 + 2?",
+            "correctAnswer": 4,
+            "incorrectAnswers": [
+                10,
+                51,
+                2
+            ]
+        },
+        {
+            "question": "What is the capital of America?",
+            "correctAnswer": "Washington D.C",
+            "incorrectAnswers": [
+                "Cincinnati",
+                "Akron",
+                "Columbus"
+            ]
+        },
+        {
+            "question": "Where did Matt go to university?",
+            "correctAnswer": "OSU",
+            "incorrectAnswers": [
+                "OU",
+                "Cincinnati",
+                "Akron"
+            ]
+        },
+        {
+            "question": "What is 2 + 0?",
+            "correctAnswer": 0,
+            "incorrectAnswers": [
+                4,
+                1,
+                6
+            ]
+        },
+        {
+            "question": "What is the capital of Korea?",
+            "correctAnswer": "Seoul",
+            "incorrectAnswers": [
+                "Beijing",
+                "Paris",
+                "Madrid"
+            ]
+        },
+        {
+            "question": "What is 2 + 2?",
+            "correctAnswer": 4,
+            "incorrectAnswers": [
+                10,
+                51,
+                2
+            ]
+        },
+        {
+            "question": "What is the capital of America?",
+            "correctAnswer": "Washington D.C",
+            "incorrectAnswers": [
+                "Cincinnati",
+                "Akron",
+                "Columbus"
+            ]
+        },
+        {
+            "question": "Where did Matt go to university?",
+            "correctAnswer": "OSU",
+            "incorrectAnswers": [
+                "OU",
+                "Cincinnati",
+                "Akron"
+            ]
+        },
+        {
+            "question": "What is 2 + 0?",
+            "correctAnswer": 0,
+            "incorrectAnswers": [
+                4,
+                1,
+                6
+            ]
+        },
+        {
+            "question": "What is the capital of Korea?",
+            "correctAnswer": "Seoul",
+            "incorrectAnswers": [
+                "Beijing",
+                "Paris",
+                "Madrid"
+            ]
+        }
+    ]
+}    
