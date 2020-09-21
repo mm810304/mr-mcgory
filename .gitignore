@@ -9,6 +9,8 @@
 *.vi
 *~
 *.sass-cache
+*.pem
+*.ppk
 node_modules/
 .tmp/
 config.env

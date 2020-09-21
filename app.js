@@ -3,6 +3,7 @@ const express = require('express');
 const helmet = require('helmet');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const compression = require('compression');
 
 dotenv.config({ path: './config.env' });
 
@@ -35,6 +36,7 @@ app.use(helmet());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(compression());
 
 //Home Page and Category Page Routes
 app.use('/', mainRouter);
@@ -45,5 +47,7 @@ app.use('/quizzes', quizRouter);
 app.use('/time-killers', timeKillerRouter);
 app.use('/social-media', socialMediaRouter);
 
-const port = process.env.PORT;
-app.listen(port);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
+});
