@@ -24,7 +24,6 @@ module.exports = {
         path: path.resolve(__dirname, 'public', 'dist'),
         filename: '[name].bundle.js'
     },
-    watch: true,
     module: {
         rules: [{
             test: /\.js$/,

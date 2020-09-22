@@ -5,9 +5,9 @@
   "main": "app.js",
   "scripts": {
     "build:dev": "webpack --watch",
-    "build:prod": "NODE_ENV=production webpack -p --env production",
-    "start:dev": "NODE_ENV=development nodemon app.js",
-    "start:prod": "NODE_ENV=production node app.js"
+    "build:prod": "webpack -p --env production",
+    "start:dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "author": "Michael McGory",
   "license": "ISC",
