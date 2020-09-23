@@ -26,7 +26,7 @@ const id = window.location.pathname.replace('/web-development/', '');
 
 async function getQuestionData(id) {
     
-    const res = await fetch(`https://mrmcgory/web-development/${id}/web-quiz-data`, {
+    const res = await fetch(`https://mrmcgory.com/web-development/${id}/web-quiz-data`, {
         headers: {
             Accept: 'application/json'
         }
