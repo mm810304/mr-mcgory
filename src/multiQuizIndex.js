@@ -29,7 +29,7 @@ let questions = [];
 //Get Quiz Data
 async function getQuestionData(id) {
     renderLoader(quizContainer);
-    const response = await fetch(`http://localhost:5000/quizzes/${id}/quiz-data`, {
+    const response = await fetch(`https://mrmcgory.com/quizzes/${id}/quiz-data`, {
         headers: {
             Accept: 'application/json'
         }
