@@ -2,7 +2,7 @@ export const renderLoader = (parentEl) => {
     const loader = `
         <div class="loader">
             <svg>
-                <use href="./../../images/icons.svg#icon-cw"></use>
+                <use href="/svg/loader.svg"></use>
             </svg>
         </div>
     `;
