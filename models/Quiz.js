@@ -10,12 +10,12 @@ const quizSchema = new mongoose.Schema({
     title: String,
     description: String,
     url: String,
+    level: String,
+    questionsAndAnswers: Array,
     image: {
         type: String,
         default: 'quiz.svg'
-    },
-    level: String,
-    questionsAndAnswers: Array
+    }
 });
 
 const Quiz = mongoose.model('quizzes', quizSchema);

@@ -17,7 +17,7 @@ exports.getSingleQuiz = async (req, res, next) => {
     res.render('./pages/multiQuiz', {
         id: quiz._id,
         title: quiz.title,
-        questionsAndAnswers: quiz.questionsAndAnswers
+        questions: quiz.questionsAndAnswers
     });
 
 }
