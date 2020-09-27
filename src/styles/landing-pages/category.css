@@ -33,7 +33,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5rem;
-    row-gap: 2rem;
+    row-gap: 2.5rem;
 }
 
 .lesson-card-container a {

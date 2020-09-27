@@ -14,6 +14,7 @@ const quizSchema = new mongoose.Schema({
         type: String,
         default: 'quiz.svg'
     },
+    level: String,
     questionsAndAnswers: Array
 });
 

@@ -29,7 +29,7 @@ let questions = [];
 //Get Quiz Data
 async function getQuestionData(id) {
     renderLoader(quizContainer);
-    const response = await fetch(`https://mrmcgory.com/quizzes/${id}/quiz-data`, {
+    const response = await fetch(`httpS://mrmcgory.com/quizzes/${id}/quiz-data`, {
         headers: {
             Accept: 'application/json'
         }
@@ -52,6 +52,7 @@ async function getQuestionData(id) {
 
         return formattedQuestion;
     });
+    
     startGame();
 };
 
@@ -75,6 +76,8 @@ function getNewQuestion() {
         getNewQuestion();
     }
 
+    answerButtons.forEach(button => button.disabled = false);
+
     resetStyle();
     setCurrentTracker(questionIndex);
     setQuestion(currentQuestion);
@@ -86,6 +89,7 @@ function setQuestion(q) {
     answerTwoText.innerHTML = q.option2;
     answerThreeText.innerHTML = q.option3;
     answerFourText.innerHTML = q.option4;
+    
 };
 
 function checkAnswer() {  
@@ -98,6 +102,8 @@ function checkAnswer() {
     } else if (userAnswer !== correctAnswer) {
         wrongAnswer();
     }
+
+    answerButtons.forEach(button => button.disabled = true);
 
     
     const unfinished = availableQuestions.filter(q => q.status === 'incomplete');
@@ -187,12 +193,6 @@ function resetAnswerButtons() {
 function highlightSelectedAnswer(event) {
     event.target.nextElementSibling.classList.add('highlight__quiz-answer');
 };
-
-function reloadQuiz() {
-    startGame();
-
-}
-
 
 //Event Listeners
 answerButtons.forEach(button => {

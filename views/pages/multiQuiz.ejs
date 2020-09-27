@@ -18,16 +18,10 @@
             </header>
  
             <div class="tracker" id="tracker">
-                <div class="tracker__numbers" id="number1">1</div>
-                <div class="tracker__numbers" id="number2">2</div>
-                <div class="tracker__numbers" id="number3">3</div>
-                <div class="tracker__numbers" id="number4">4</div>
-                <div class="tracker__numbers" id="number5">5</div>
-                <div class="tracker__numbers" id="number6">6</div>
-                <div class="tracker__numbers" id="number7">7</div>
-                <div class="tracker__numbers" id="number8">8</div>
-                <div class="tracker__numbers" id="number9">9</div>
-                <div class="tracker__numbers" id="number10">10</div>
+                <% questionsAndAnswers.forEach((question, index) => { %>
+                    <div class="tracker__numbers" id="number<%= index + 1 %>"><%= index + 1 %></div> 
+                <% }) %>
+
             </div>
  
              <div class="quiz-box">

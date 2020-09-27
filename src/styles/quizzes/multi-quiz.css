@@ -40,14 +40,15 @@
 
 .tracker__numbers {
     display: inline-block;
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.2rem;
     border-radius: 50%;
     background-color: var(--slate-gray);
     color: var(--off-white);
     text-align: center;
     margin: 1rem;
-    font-size: 2.4rem;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,6 +159,19 @@ input[type="radio"] {
         width: 90%;
         height: 85vh;
     } 
+
+    .tracker__numbers {
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .tracker {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 }
 
 @media (max-width: 850px) {
@@ -178,13 +192,6 @@ input[type="radio"] {
         margin-bottom: 3rem;
     }
     
-    .tracker__numbers {
-        width: 4rem;
-        height: 4rem;
-        font-size: 2.2rem;
-        margin: 1rem .5rem;
-    }
-
     .check-answer-response {
         margin-top: 2rem;
         margin-bottom: 1rem;
@@ -215,9 +222,9 @@ input[type="radio"] {
     }
 
     .tracker__numbers {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.8rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1.2rem;
         margin: 1rem .2rem;
     }
 
