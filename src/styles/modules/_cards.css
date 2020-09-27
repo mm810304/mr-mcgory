@@ -51,7 +51,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 40vh;
+    height: 45vh;
     padding-bottom: 2rem;
 
     background-color: var(--off-white);
@@ -82,6 +82,7 @@
     text-decoration: none;
     color: var(--primary-blue);
     padding: 0 1rem;
+    align-self: flex-start;
 }
 
 .lesson-card__level {
@@ -93,8 +94,6 @@
     color: var(--text-content-gray);
     border: .25rem solid var(--primary-blue);
 }
-
-
 
 .lesson-card:hover  {
     filter: brightness(105%);
@@ -115,6 +114,8 @@
     color: var(--off-white);
 }
 
-.lesson-card__description:hover {
+.lesson-card:hover > .lesson-card__description {
     color: var(--off-white);
 }
+
+

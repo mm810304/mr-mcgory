@@ -20,7 +20,7 @@
                     <% lessons.forEach(lesson => { %>
                         <a class="lesson-card-link" href="<%= lesson.url %>/<%= lesson._id %>"><div class="lesson-card">
                             <img src="svg/<%= lesson.image %>" class="lesson-card__image">
-                            <% if (lesson.level) { %>
+                            <% if(lesson.level) { %>
                                 <p class="lesson-card__level"><%= lesson.level %></p>
                             <% } %>
                             <h2 class="lesson-card__title"><%= lesson.title %></h2>
