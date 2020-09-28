@@ -8,10 +8,10 @@ const quizSchema = new mongoose.Schema({
         default: 'Science'
     },
     title: String,
+    level: String,
     description: String,
     url: String,
-    level: String,
-    questionsAndAnswers: Array,
+    questions: Array,
     image: {
         type: String,
         default: 'quiz.svg'

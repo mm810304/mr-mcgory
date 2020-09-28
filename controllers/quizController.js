@@ -12,19 +12,19 @@ exports.getQuizzes = async (req, res, next) => {
 
 exports.getSingleQuiz = async (req, res, next) => {
     const id = req.params.id;
-    const quiz = await Quiz.findById(id).select('_id title questionsAndAnswers');
+    const quiz = await Quiz.findById(id).select('_id title questions');
 
     res.render('./pages/multiQuiz', {
         id: quiz._id,
         title: quiz.title,
-        questions: quiz.questionsAndAnswers
+        questions: quiz.questions
     });
 
 }
 
 exports.getQuizData = async (req, res, next) => {
     const id = req.params.id;
-    const quizData = await Quiz.findById(id).select('questionsAndAnswers');
+    const quizData = await Quiz.findById(id).select('questions');
 
     res.json(quizData);
 }
