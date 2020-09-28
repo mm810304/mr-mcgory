@@ -37,7 +37,7 @@ async function getQuestionData(id) {
 
     const quizData = await response.json();
 
-    questions = quizData.questionsAndAnswers.map(item => {
+    questions = quizData.questions.map(item => {
         const formattedQuestion = {
             question: item.question,
             correctAnswer: item.correctAnswer,
