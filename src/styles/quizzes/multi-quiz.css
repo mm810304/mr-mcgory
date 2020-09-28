@@ -11,8 +11,8 @@
     background-color: var(--off-white);
     width: 100vw;
     max-width: 110rem;
-    height: 90vh;
-    max-height: 75rem;
+    height: 92vh;
+    max-height: 78rem;
     border-radius: 10px;
 }
 
@@ -102,38 +102,39 @@
 }
 
 .answer__prefix {
-    padding: 1.1rem 2rem;
+    padding: 2rem 2rem;
     margin-right: 2rem;
     align-self: flex-start;
+    justify-self: center;
     height: 100%;
     background-color: var(--slate-gray);
     color: white;
+    font-size: 2.2rem;
 }
 
-.answer__text {
-    padding: 1.5rem;
-    width: 100%;
-    font-size: 2.4rem;
-}
-
-input[type="radio"] {
-    opacity: 0;
-    width: 0;
-    height: 2rem;
-    padding: 1.5rem;
-}
-  
 .answer__text {
     text-align: left;
     cursor: inherit;
     width: 100%;
     height: 100%;
-    padding: 1rem 0;
-  }
+    padding: 0;
+    display: flex;
+}
 
 .answer__option-text {
-    font-size: 2.4rem;
-} 
+    width: 100%;
+    font-size: 2.2rem;
+    justify-self: center;
+    align-self: center;
+}
+
+
+input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    height: 2rem;
+    padding: 0;
+}
 
 .check-answer-response {
     text-align: center;
@@ -171,13 +172,14 @@ input[type="radio"] {
     .tracker {
         flex-wrap: wrap;
         justify-content: flex-start;
+        margin-bottom: 3rem;
     }
 }
 
 @media (max-width: 850px) {
     .quiz {
         width: 95%;
-        height: 90vh;
+        height: 95vh;
     } 
     
     .question {
@@ -189,7 +191,7 @@ input[type="radio"] {
     }
 
     .tracker {
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
     }
     
     .check-answer-response {
@@ -199,7 +201,7 @@ input[type="radio"] {
     }
     
     .check-answer-response__text {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
     
     .answer__option-text {
@@ -219,13 +221,7 @@ input[type="radio"] {
 
     .tracker {
         margin-bottom: 2rem;
-    }
-
-    .tracker__numbers {
-        width: 1.5rem;
-        height: 1.5rem;
-        font-size: 1.2rem;
-        margin: 1rem .2rem;
+        justify-content: center;
     }
 
     .answer__option-text {
