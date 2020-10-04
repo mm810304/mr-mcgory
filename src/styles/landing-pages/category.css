@@ -50,18 +50,18 @@
     }
 }
 
-@media (max-width: 720px) {
-    .lesson-card-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
+@media (max-width: 620px) {
     .category-header__title {
         font-size: 3.5rem;
+    }
+    .category-header__description {
+        text-align: center;
     }
 }
 
 @media (max-width: 550px) {
     .lesson-card-container {
+        grid-template-columns: repeat(1, 1fr);
         grid-column: left-side-start / right-side-end;
         margin: 0 .5rem;
     }
@@ -73,5 +73,6 @@
 
     .category-header__description {
         font-size: 1.6rem;
+        text-align: center;
     }
 }
