@@ -129,7 +129,7 @@
 }
 
 
-input[type="radio"] {
+.quiz__hidden-radio {
     opacity: 0;
     width: 0;
     height: 2rem;

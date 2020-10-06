@@ -10,6 +10,7 @@ const webQuizSchema = new mongoose.Schema({
         type: String,
         default: 'coding.svg'
     },
+    level: String,
     quizData: Array
 });
 

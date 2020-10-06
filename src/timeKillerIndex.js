@@ -1,11 +1,13 @@
 import '@babel/polyfill';
 
 import Hangman from './timekillers/hangman.js';
+import Sketch from './timekillers/sketch.js';
+import Nasa from './timekillers/nasa.js';
 
 const id = window.location.pathname.replace('/time-killers/', '');
 
 async function getAppName(id) {
-    const response = await fetch(`https://mrmcgory.com/time-killers/${id}/app-name`, {
+    const response = await fetch(`http://localhost:5000/time-killers/${id}/app-name`, {
         headers: {
             Accept: 'application/json'
         }
@@ -15,6 +17,10 @@ async function getAppName(id) {
 
     if (app.name === Hangman.id) {
         Hangman.app();
+    } else if (app.name === Sketch.id) {
+        Sketch.app();
+    } else if (app.name === Nasa.id) {
+        Nasa.app();
     }
 }
 

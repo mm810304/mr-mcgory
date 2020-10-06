@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/styles.min.css">
+    <title>Sketch It Up</title>
+</head>
+<body id="sketch-body">
+    <div class="navigation__logo left">
+        <h3 class="navigation__logo-text white-text"><a class="navigation__logo-text white-text" href="/">MrM</a></h3>
+    </div>
+    <div class="canvasWrap">
+        <div class="sketch__controls">
+            <div class="sketch__line-width-container">
+                <label class="sketch__label" for="sketch-line-width">Choose a Line Width</label>
+                <select name="sketch-line-width" id="sketch-line-width">
+                    <option value="10">10px</option>
+                    <option value="20">20px</option>
+                    <option value="30">30px</option>
+                    <option value="40">40px</option>
+                    <option value="50">50px</option>
+                </select>
+            </div>
+            <div class="sketch__stroke-radio" id="sketch-line-cap">
+                <input type="radio" name="line-cap" value="round" checked>
+                <label class="sketch__label" for="round">Round</label>
+                <input type="radio" name="line-cap" value="square">
+                <label class="sketch__label" for="square">Square</label>
+            </div>
+            <div class="sketch__color-container">
+                <label class="sketch__label" for="sketch-color">Choose a Color</label>
+                <select name="sketch-color" id="sketch-color">
+                    <option value="red">Red</option>
+                    <option value="rainbow">Rainbow</option>
+                    <option value="rainbow-random">Rainbow Random</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="pink">Pink</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+        </div>
+        <canvas width="1600" height="1000" id="etch-a-sketch"></canvas>
+        <div class="sketch__button-container">
+            <button class="sketch__button shake" id="shake-button">Shake!</button>
+            <div class="sketch__challenge">
+                <button class="sketch__button" id="challenge-button">Give Me a Challenge</button>
+                <p class="sketch__challenge-item"></p>
+            </div>
+        </div>
+    </div>
+    <script src="/dist/timekiller.bundle.js" type="module"></script>
+</body>
+</html>

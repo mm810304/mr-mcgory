@@ -25,6 +25,7 @@ const timeKillerSchema = new mongoose.Schema({
         type: String,
         default: 'default.svg'
     },
+    key: String,
     data: {}
 });
 
