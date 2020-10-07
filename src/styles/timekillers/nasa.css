@@ -47,6 +47,7 @@
 }
   
 .nasa__clickable {
+    font-size: 1.8rem;
     color: dodgerblue;
     cursor: pointer;
     user-select: none;

@@ -93,6 +93,7 @@ const Nasa = {
         async function getNasaPictures() {
             loader.classList.remove('hidden');
             try {
+                console.log('Trying to fetch...')
                 const response = await fetch(apiUrl);
                 resultsArray = await response.json();
                 updateDOM('results');
