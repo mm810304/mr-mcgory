@@ -11,20 +11,21 @@
         <img src="./../../svg/loader-two.svg" alt="Loader Animation">
     </div>
 
-    <div class="navigation__logo left">
-        <h3 class="navigation__logo-text white-text"><a class="navigation__logo-text white-text" href="/">MrM</a></h3>
-    </div>
+
 
     <div class="nasa__container">
+        <div class="logo-on-top" class="navigation__logo left">
+            <h3 class="navigation__logo-text blue-text"><a class="navigation__logo-text blue-text" href="/">MrM</a></h3>
+        </div>
         <div class="nasa__navigation-container">
             <span class="nasa__background"></span>
             <span class="nasa__navigation-items" id="resultsNav">
-                <h3 class="nasa__clickable" onclick="updateDOM('favorites')">Favorites</h3>
+                <h3 id="favorite-link" class="nasa__clickable">Favorites</h3>
                 <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
-                <h3 class="nasa__clickable" onclick="getNasaPictures()">Load More</h3>
+                <h3 id="get-more-images-link" class="nasa__clickable">Load More</h3>
             </span>
             <span class="nasa__navigation-items hidden" id="favoritesNav">
-                <h3 class="nasa__clickable" onclick="getNasaPictures()">Load More NASA Images</h2>
+                <h3 id="get-more-images-link-two" class="nasa__clickable">Load More NASA Images</h2>
             </span>
         </div>
 
@@ -33,7 +34,7 @@
     </div>
 
     <div class="nasa__save-confirmed" hidden>
-        <h1>ADDED!</h1>
+        <h1 class="nasa__save-confirmed-text">ADDED!</h1>
     </div>
 
     <script src="/dist/timekiller.bundle.js" type="module"></script>
