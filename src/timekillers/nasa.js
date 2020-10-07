@@ -8,7 +8,6 @@ const Nasa = {
 
         const count = 10;
         const API_KEY = 'D0yF2LJ6lgNBX6gxEspKVLiqPAJEVlX3pUZhKJ9a';
-        console.log(API_KEY);
         const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=${count}`;
 
         let resultsArray = [];
@@ -98,7 +97,7 @@ const Nasa = {
                 resultsArray = await response.json();
                 updateDOM('results');
             } catch(error) {
-            console.log(error);
+            console.log('There is an error fetching data', error);
             }
         };
 

@@ -49,7 +49,7 @@
 .lesson-card {
     display: grid;
     grid-template-rows: 45% 1fr;
-    height: 45vh;
+    height: 45rem;
 
     background-color: var(--off-white);
     box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
@@ -63,13 +63,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 1rem .5rem;
+    padding: 1rem;
 }
 
 .lesson-card__image {
-    width: 80%;
-    max-width: 210px;
-    align-self: flex-end;
+    width: 100%;
+    max-width: 225px;
+    overflow: hidden;
+    align-self: center;
     justify-self: center;
 }
 
@@ -124,19 +125,19 @@
 
 @media (max-width: 1024px) {
     .lesson-card {
-        height: 40vh;
+        height: 40rem;
     }
 }
 
-@media (max-width: 725px) {
+@media (max-width: 775px) {
     .lesson-card {
-        height: 60vh;
+        height: 50rem;
     }
 }
 
 @media (max-width: 550px) {
     .lesson-card {
-        height: auto;
+        height: 45rem;
     }
 
     .lesson-card__text-container {
@@ -144,7 +145,6 @@
     }
     
     .lesson-card__title {
-        font-size: 2.8rem;
         margin: 1rem .5rem;
     }
 
