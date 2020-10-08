@@ -17,8 +17,6 @@ exports.getSingleApp = async (req, res, next) => {
     const app = await TimeKillers.findById(id).select('name');
     
     res.sendFile(path.join(__dirname, '../public', 'pages', 'timekillers', `${app.name}.html`));
-
-
 };
 
 exports.getAppName = async (req, res, next) => {

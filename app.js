@@ -52,7 +52,7 @@ app.use('/social-media', socialMediaRouter);
 
 app.get('/get-nasa-data', async (req, res, next) => {
     let count = 10;
-    const API_KEY = process.env.NASA_API_KEY;
+    const API_KEY = 'D0yF2LJ6lgNBX6gxEspKVLiqPAJEVlX3pUZhKJ9a';
     const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=${count}`;
     
     const response = await fetch(apiUrl);
