@@ -9,10 +9,6 @@ const Nasa = {
         const getMoreImagesLink = document.getElementById('get-more-images-link');
         const getMoreImagesLinkTwo = document.getElementById('get-more-images-link-two');
 
-        const count = 10;
-        const API_KEY = 'D0yF2LJ6lgNBX6gxEspKVLiqPAJEVlX3pUZhKJ9a';
-        const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=${count}`;
-
         let resultsArray = [];
         let favorites = {};
 
@@ -102,7 +98,7 @@ const Nasa = {
         async function getNasaPictures(id) {
             loader.classList.remove('hidden');
            
-            const rawData = await fetch(`http://localhost:5000/get-nasa-data`, {
+            const rawData = await fetch(`https://mrmcgory.com/get-nasa-data`, {
                 headers: {
                     Accept: 'application/json'
                 }
