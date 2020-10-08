@@ -41,16 +41,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(compression());
 
-//Home Page and Category Page Routes
-app.use('/', mainRouter);
-app.use('/science', scienceRouter);
-app.use('/data-visuals', dataVisualRouter);
-app.use('/web-development', webQuizRouter);
-app.use('/quizzes', quizRouter);
-app.use('/time-killers', timeKillerRouter);
-app.use('/social-media', socialMediaRouter);
-
-app.all('/get-nasa-data', async (req, res, next) => {
+app.get('/get-nasa-data', async (req, res, next) => {
     let count = 10;
     const API_KEY = process.env.NASA_API_KEY;
     const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=${count}`;
@@ -61,6 +52,17 @@ app.all('/get-nasa-data', async (req, res, next) => {
     res.json(nasaData);
     next();
 });
+
+//Home Page and Category Page Routes
+app.use('/', mainRouter);
+app.use('/science', scienceRouter);
+app.use('/data-visuals', dataVisualRouter);
+app.use('/web-development', webQuizRouter);
+app.use('/quizzes', quizRouter);
+app.use('/time-killers', timeKillerRouter);
+app.use('/social-media', socialMediaRouter);
+
+
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
