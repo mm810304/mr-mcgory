@@ -95,8 +95,10 @@ const Nasa = {
             showContent(page);
         };
 
-        async function getNasaPictures(id) {
+        async function getNasaPictures() {
             loader.classList.remove('hidden');
+
+            console.log('Front end before fetching data')
            
             const rawData = await fetch(`https://mrmcgory.com/get-nasa-data`, {
                 headers: {
@@ -104,8 +106,12 @@ const Nasa = {
                 }
             });
 
+            console.log('Front end after getting raw data but not changing to json')
+
             const nasaData = await rawData.json();
+            console.log('after changing to json')
             resultsArray = nasaData;
+            console.log('after putting in results array')
             updateDOM('results');
             
         };
