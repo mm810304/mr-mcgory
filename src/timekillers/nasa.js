@@ -12,8 +12,6 @@ const Nasa = {
         let resultsArray = [];
         let favorites = {};
 
-        const id = window.location.pathname.replace('/time-killers/', '');
-
         window.saveFavoriteNasa = saveFavoriteNasa;
         window.removeFavoriteNasa = removeFavoriteNasa;
 
@@ -97,9 +95,7 @@ const Nasa = {
 
         async function getNasaPictures() {
             loader.classList.remove('hidden');
-
-            console.log('Front end before fetching data')
-           
+          
             const rawData = await fetch(`https://mrmcgory.com/get-nasa-data`, {
                 headers: {
                     Accept: 'application/json'
