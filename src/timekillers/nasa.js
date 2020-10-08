@@ -96,7 +96,7 @@ const Nasa = {
         async function getNasaPictures() {
             loader.classList.remove('hidden');
             try {
-                const rawData = await fetch(`http://localhost:5000/get-nasa-data`, {
+                const rawData = await fetch(`https://mrmcgory.com/get-nasa-data`, {
                     headers: {
                         Accept: 'application/json'
                     }
