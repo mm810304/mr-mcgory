@@ -50,7 +50,7 @@ app.use('/quizzes', quizRouter);
 app.use('/time-killers', timeKillerRouter);
 app.use('/social-media', socialMediaRouter);
 
-app.use('/get-nasa-data', async (req, res, next) => {
+app.all('/get-nasa-data', async (req, res, next) => {
     let count = 10;
     const API_KEY = process.env.NASA_API_KEY;
     const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=${count}`;

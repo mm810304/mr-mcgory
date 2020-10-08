@@ -95,20 +95,21 @@ const Nasa = {
 
         async function getNasaPictures() {
             loader.classList.remove('hidden');
-          
-            const rawData = await fetch(`https://mrmcgory.com/get-nasa-data`, {
-                headers: {
-                    Accept: 'application/json'
-                }
-            });
+            try {
+                const rawData = await fetch(`http://localhost:5000/get-nasa-data`, {
+                    headers: {
+                        Accept: 'application/json'
+                    }
+                });
+                const nasaData = await rawData.json();
+                console.log('after changing to json')
+                resultsArray = nasaData;
+                console.log('after putting in results array')
+                updateDOM('results');
+            } catch (error) {
+                console.log('error fetching data', error);
+            }
 
-            console.log('Front end after getting raw data but not changing to json')
-
-            const nasaData = await rawData.json();
-            console.log('after changing to json')
-            resultsArray = nasaData;
-            console.log('after putting in results array')
-            updateDOM('results');
             
         };
 
