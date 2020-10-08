@@ -16,6 +16,8 @@ const Nasa = {
         let resultsArray = [];
         let favorites = {};
 
+        const id = window.location.pathname.replace('/time-killers/', '');
+
         window.saveFavoriteNasa = saveFavoriteNasa;
         window.removeFavoriteNasa = removeFavoriteNasa;
 
@@ -97,15 +99,19 @@ const Nasa = {
             showContent(page);
         };
 
-        async function getNasaPictures() {
+        async function getNasaPictures(id) {
             loader.classList.remove('hidden');
-            try {
-                const response = await fetch(apiUrl);
-                resultsArray = await response.json();
-                updateDOM('results');
-            } catch(error) {
-            console.log(error);
-            }
+           
+            const rawData = await fetch(`http://localhost:5000/get-nasa-data`, {
+                headers: {
+                    Accept: 'application/json'
+                }
+            });
+
+            const nasaData = await rawData.json();
+            resultsArray = nasaData;
+            updateDOM('results');
+            
         };
 
         function saveFavoriteNasa(itemUrl) {

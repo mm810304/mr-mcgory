@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const compression = require('compression');
+const fetch = require('node-fetch');
 
 dotenv.config({ path: './config.env' });
 
@@ -48,6 +49,19 @@ app.use('/web-development', webQuizRouter);
 app.use('/quizzes', quizRouter);
 app.use('/time-killers', timeKillerRouter);
 app.use('/social-media', socialMediaRouter);
+
+app.use('/get-nasa-data', async (req, res, next) => {
+    console.log('doing things');
+    let count = 10;
+    const API_KEY = process.env.NASA_API_KEY;
+    const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=${count}`;
+    
+    const response = await fetch(apiUrl);
+    const nasaData = await response.json();
+    
+    res.json(nasaData);
+    
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {

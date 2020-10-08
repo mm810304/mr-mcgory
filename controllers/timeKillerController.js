@@ -1,4 +1,5 @@
 const path = require('path');
+const fetch = require('node-fetch');
 const TimeKillers = require('../models/TimeKillers');
 
 exports.getTimeKillers = async (req, res, next) => {
@@ -16,6 +17,8 @@ exports.getSingleApp = async (req, res, next) => {
     const app = await TimeKillers.findById(id).select('name');
     
     res.sendFile(path.join(__dirname, '../public', 'pages', 'timekillers', `${app.name}.html`));
+
+
 };
 
 exports.getAppName = async (req, res, next) => {
@@ -24,3 +27,5 @@ exports.getAppName = async (req, res, next) => {
 
     res.json(appName);
 };
+
+

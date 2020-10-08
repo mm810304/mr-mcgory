@@ -23,6 +23,7 @@
     "express": "^4.17.1",
     "helmet": "^3.23.3",
     "mongoose": "^5.9.22",
+    "node-fetch": "^2.6.1",
     "sass-loader": "^10.0.2",
     "twit": "^2.2.11",
     "webpack": "^4.44.1",
