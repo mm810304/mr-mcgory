@@ -1,0 +1,307 @@
+.math-speed-challenge-body {
+  margin: 0;
+  font-family: PT Mono, sans-serif;
+  overflow: hidden;
+  background: #e8e8e8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23161616' fill-opacity='0.1'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.math-speed {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.math-speed__game-container {
+  border: 1px solid black;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+  width: 530px;
+  height: 750px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.5);
+  user-select: none;
+}
+
+.math-speed__header {
+  padding: 1rem;
+  background-color: dodgerblue;
+  text-align: center;
+}
+
+.math-speed__header-text {
+  color: var(--off-white);
+  font-size: 3rem;
+  text-shadow: 1px 2px 2px var(--primary-color);
+  letter-spacing: 2px;
+}
+
+.math-speed__card {
+  margin: 5px auto 10px;
+  height: 600px;
+}
+
+.math-speed__radio {
+  opacity: 0;
+  width: 100%;
+  height: 75px;
+  position: relative;
+  top: -40px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.math-speed__selection-container {
+  position: relative;
+  top: 65px;
+}
+
+.math-speed__radio-container {
+  width: 90%;
+  height: 75px;
+  margin: 25px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.math-speed__radio-label {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+}
+
+.math-speed__selected-label {
+  background: dodgerblue;
+  color: white;
+}
+
+.math-speed__best-score {
+  position: relative;
+  top: -100px;
+  left: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  max-width: fit-content;
+}
+
+.math-speed__best-score span {
+  margin: 0;
+}
+
+.math-speed__best-score span:last-child {
+  font-size: 24px;
+}
+
+.math-speed__selection-footer {
+  top: 134px;
+}
+
+.math-speed__height-240 {
+  height: 215px;
+  width: 100%;
+}
+
+.math-speed__height-500 {
+  height: 500px;
+  width: 100%;
+}
+
+.math-speed__item-container {
+  height: 552px;
+  overflow-y: scroll;
+  position: relative;
+  -ms-overflow-style: none;
+}
+
+.math-speed__item-container::-webkit-scrollbar {
+  display: none;
+}
+
+.math-speed__item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  height: 80px;
+  margin: 0 50px;
+  user-select: none;
+}
+
+.math-speed__item > h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.math-speed__finished > h1 {
+  opacity: 0.5;
+}
+
+.math-speed__selected-item {
+  background: var(--light-blue);
+  position: fixed;
+  top: 443px;
+  z-index: -1;
+  width: 529px;
+  height: 80px;
+}
+
+.math-speed__item-footer,
+.math-speed__selection-footer {
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.math-speed__item-footer {
+  top: 1px;
+}
+
+.math-speed__btn {
+  cursor: pointer;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 25px;
+  font-family: Oxanium, sans-serif;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.math-speed__item-footer button:hover {
+  filter: brightness(110%);
+}
+
+.math-speed__item-footer button:active {
+  transform: scale(0.99);
+}
+
+.math-speed__wrong,
+.math-speed__right {
+  width: 40%;
+}
+
+.math-speed__wrong {
+  background: var(--wrong-answer);
+  margin-right: 25px;
+}
+
+.math-speed__right {
+  background: var(--right-answer);
+}
+
+.math-speed__start,
+.math-speed__play-again {
+  width: 90%;
+  background: dodgerblue;
+  margin: 0;
+}
+
+.math-speed__countdown {
+  margin-top: 45%;
+  font-size: 100px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.math-speed__score-container {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.math-speed__score-footer {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -30px;
+}
+
+.math-speed__title {
+  font-size: 45px;
+}
+
+.math-speed__final-time {
+  font-size: 100px;
+  margin: 0;
+  color: var(--right-answer);
+}
+
+.math-speed__base-time {
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.math-speed__penalty-time {
+  color: var(--wrong-answer);
+}
+
+@media screen and (max-width: 1800px) {
+  .math-speed__game-container {
+    margin-top: 35px;
+  }
+
+  .math-speed__selected-item {
+    top: 380px;
+  }
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 500px) {
+  .math-speed__game-container {
+    width: 100%;
+    margin-top: 0;
+    border: none;
+  }
+
+  .math-speed__selected-item {
+    top: 345px;
+  }
+
+  .math-speed__header {
+    font-size: 1.2rem;
+  }
+
+  .math-speed__countdown {
+    margin-top: 60%;
+  }
+
+  .math-speed__selection-container {
+    top: 100px;
+  }
+
+  .math-speed__radio-container {
+    width: 93%;
+    margin: 15px;
+  }
+
+  .math-speed__ label {
+    font-size: 1.7rem;
+  }
+
+  .math-speed__best-score {
+    font-size: 1rem;
+    left: 245px;
+  }
+
+  .math-speed__selection-footer {
+    top: 183px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .math-speed__best-score {
+    left: 232px;
+  }
+}

@@ -2,7 +2,6 @@
     min-height: 100vh;
     background: var(--primary-blue);
     background-size: cover;
-    overflow-y: hidden;
 }
 
 .canvasWrap {
@@ -14,8 +13,8 @@
 #etch-a-sketch {
     border: 30px solid #e80000;
     border-radius: 10px;
-    width: 1100px;
-    height: 650px;
+    width: 90vw;
+    max-width: 1000px;
     background: white;
 }
 
@@ -24,7 +23,7 @@
     justify-content: space-around;
     align-items: flex-end;
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .sketch__line-width-container {
@@ -113,5 +112,19 @@
 
     40%, 60% {
         transform: translate3d(4px, 0, 0);
+    }
+}
+
+@media (max-width: 525px) {
+    #etch-a-sketch {
+        width: 100vw;
+        max-width: 525px;
+    }
+    .sketch__controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
     }
 }

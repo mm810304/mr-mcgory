@@ -18,7 +18,7 @@
     align-self: flex-start;
 }
 
-h1 {
+.hangman-header {
     margin: 2rem 0 0;
 }
 

@@ -19,7 +19,6 @@ exports.getSingleQuiz = async (req, res, next) => {
         title: quiz.title,
         questions: quiz.questions
     });
-
 }
 
 exports.getQuizData = async (req, res, next) => {

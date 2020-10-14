@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/styles.min.css">
+    <title><%= title %></title>
+</head>
+<body class="math-speed-challenge-body">
+    <%- include('../partials/homeLinkBlueText') %>
+
+    <div class="math-speed">
+        <div class="math-speed__game-container">
+            <div class="math-speed__header">
+                <h1 class="math-speed__header-text"><%= title %></h1>
+            </div>
+    
+            <div class="math-speed__card" id="splash-page">
+                <form id="start-form">
+                    <div class="math-speed__selection-container">
+                        <div class="math-speed__radio-container">
+                            <label class="math-speed__radio-label" for="value-10">10 Questions</label>
+                            <input class="math-speed__radio" type="radio" name="questions" value="10" id="value-10">
+                            <span class="math-speed__best-score">
+                                <span>Best Score</span>
+                                <span class="math-speed__best-score-value"></span>
+                            </span>
+                        </div>
+    
+                        <div class="math-speed__radio-container">
+                            <label class="math-speed__radio-label" for="value-25">25 Questions</label>
+                            <input class="math-speed__radio" type="radio" name="questions" value="25" id="value-25">
+                            <span class="math-speed__best-score">
+                                <span>Best Score</span>
+                                <span class="math-speed__best-score-value"></span>
+                            </span>
+                        </div>
+    
+                        <div class="math-speed__radio-container">
+                            <label class="math-speed__radio-label" for="value-50">50 Questions</label>
+                            <input class="math-speed__radio" type="radio" name="questions" value="50" id="value-50">
+                            <span class="math-speed__best-score">
+                                <span>Best Score</span>
+                                <span class="math-speed__best-score-value"></span>
+                            </span>
+                        </div>
+    
+                        <div class="math-speed__radio-container">
+                            <label class="math-speed__radio-label" for="value-99">99 Questions</label>
+                            <input class="math-speed__radio" type="radio" name="questions" value="99" id="value-99">
+                            <span class="math-speed__best-score">
+                                <span>Best Score</span>
+                                <span class="math-speed__best-score-value"></span>
+                            </span>
+                        </div>
+                    </div>
+    
+                    <div class="math-speed__selection-footer">
+                        <button class="math-speed__start math-speed__btn" type="submit">Start</button>
+                    </div>
+                </form>
+            </div>
+    
+            <div class="math-speed__card" id="countdown-page" hidden>
+                <h1 class="math-speed__countdown"></h1>
+            </div>
+    
+            <div class="math-speed__card" id="game-page" hidden>
+                <div class="math-speed__item-container"></div>
+                <div class="math-speed__item-footer">
+                    <button class="math-speed__wrong math-speed__btn">Wrong</button>
+                    <button class="math-speed__right math-speed__btn">Right</button>
+                </div>
+            </div>
+    
+            <div class="math-speed__card" id="score-page" hidden>
+                <div class="math-speed__score-container">
+                    <h1 class="math-speed__title">Your Time</h1>
+                    <h1 class="math-speed__final-time"></h1>
+                    <h1 class="math-speed__base-time"></h1>
+                    <h1 class="math-speed__penalty-time"></h1>
+                </div>
+    
+                <div class="math-speed__score-footer">
+                    <button class="math-speed__play-again math-speed__btn" hidden>Play Again</button>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <script src="/dist/mathspeed.bundle.js" type="module"></script>
+</body>
+</html>

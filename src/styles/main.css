@@ -16,7 +16,8 @@
 @import './quizzes/multi-quiz.css';
 @import './quizzes/web-quiz.css';
 @import './socialmedia/twitter.css';
-@import './timekillers/timekillers-main.css'
+@import './timekillers/timekillers-main.css';
+@import './math/speed-challenge.scss';
 
 
 

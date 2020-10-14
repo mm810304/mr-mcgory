@@ -83,6 +83,10 @@
     max-width: 1400px;
 }
 
+.not-science {
+    margin-bottom: 5rem;
+}
+
 @media (max-width: 1100px) {
     .home-header__title {
         font-size: 6rem;

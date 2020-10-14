@@ -18,7 +18,8 @@ module.exports = {
         visual: './src/vizIndex.js',
         timekiller: './src/timeKillerIndex.js',
         webquiz: './src/webQuizIndex.js',
-        main: './src/main.js'
+        main: './src/main.js',
+        mathspeed: './src/mathSpeedChallengeIndex.js'
     },
     output: {
         path: path.resolve(__dirname, 'public', 'dist'),
