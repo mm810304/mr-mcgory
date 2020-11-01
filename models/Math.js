@@ -8,14 +8,14 @@ const mathSchema = new mongoose.Schema({
         default: 'Math'
     },
     title: String,
+    filename: String,
     description: String,
     level: String,
     url: String,
     image: {
         type: String,
         default: 'calculator.svg'
-    },
-    equations: Object
+    }
 });
 
 const Math = mongoose.model('mathlessons', mathSchema);

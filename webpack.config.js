@@ -15,11 +15,11 @@ module.exports = {
     entry: {
         multiquiz: './src/multiQuizIndex.js',
         demo: './src/demoIndex.js',
-        visual: './src/vizIndex.js',
         timekiller: './src/timeKillerIndex.js',
         webquiz: './src/webQuizIndex.js',
         main: './src/main.js',
-        mathspeed: './src/mathSpeedChallengeIndex.js'
+        mathspeed: './src/mathSpeedChallengeIndex.js',
+        trivia: './src/triviaIndex.js'
     },
     output: {
         path: path.resolve(__dirname, 'public', 'dist'),

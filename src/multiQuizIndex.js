@@ -26,7 +26,6 @@ let tracker;
 
 let questions = [];
 
-//Get Quiz Data
 async function getQuestionData(id) {
     renderLoader(quizContainer);
     const response = await fetch(`https://mrmcgory.com/quizzes/${id}/quiz-data`, {

@@ -12,12 +12,12 @@ const app = express();
 
 const mainRouter = require('./routes/mainRoutes');
 const scienceRouter = require('./routes/scienceRoutes');
-const dataVisualRouter = require('./routes/dataVisualRoutes');
 const webQuizRouter = require('./routes/webQuizRoutes');
 const quizRouter = require('./routes/quizRoutes');
 const timeKillerRouter = require('./routes/timeKillerRoutes');
 const socialMediaRouter = require('./routes/socialMediaRoutes');
 const mathRouter = require('./routes/mathRoutes');
+const triviaRouter = require('./routes/triviaRoutes');
 
 //View Engine
 app.set('views', path.join(__dirname, 'views'));
@@ -42,17 +42,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(compression());
 
-
-
 //Home Page and Category Page Routes
 app.use('/', mainRouter);
 app.use('/science', scienceRouter);
-app.use('/data-visuals', dataVisualRouter);
 app.use('/web-development', webQuizRouter);
 app.use('/quizzes', quizRouter);
 app.use('/time-killers', timeKillerRouter);
 app.use('/social-media', socialMediaRouter);
 app.use('/math', mathRouter);
+app.use('/trivia', triviaRouter);
 
 app.get('/get-nasa-data', async (req, res, next) => {
     let count = 10;

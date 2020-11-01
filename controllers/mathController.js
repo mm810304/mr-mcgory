@@ -27,3 +27,11 @@ exports.getEquations = async (req, res, next) => {
 
     res.json(equations);
 };
+
+exports.getMathSpeedName = async (req, res, next) => {
+    const id = req.params.id;
+    const mathSpeedName = await Math.findById(id).select('filename');
+
+    res.json(mathSpeedName);
+}
+

@@ -9,6 +9,11 @@
     background-color: var(--bright-blue);
 }
 
+.highlight__trivia-answer {
+    background-color: var(--light-reddish-brown);
+    color: var(--off-white);
+}
+
 .highlight-right {
     background-color: var(--right-answer);
 }

@@ -2,6 +2,7 @@ import '@babel/polyfill';
 
 import { Friction } from './activities/modules/friction.js';
 import { Gravity } from './activities/modules/gravity.js';
+import { RecentEarthquakes } from './activities/modules/recentEarthquakes';
 
 const id = window.location.pathname.replace('/science/', '');
 
@@ -20,6 +21,10 @@ async function getDemo(id) {
 
     if (lesson.filename === Friction.id) {
         Friction.demo();
+    }
+
+    if (lesson.filename === RecentEarthquakes.name) {
+        RecentEarthquakes.visual();
     }
 
 };

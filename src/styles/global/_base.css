@@ -1,20 +1,19 @@
 /*Variables*/
 :root {
     --primary-blue: #2c3e50;
-    --light-blue: #4285c8;
+    --light-blue: #56b9eb;
     --off-white: #fefefa;
     --text-content-gray: #2e2e2e;
     --light-gray: #bdbdbd;
-    --bright-blue: #59b8f0;
-    --green: #0ea133;
+    --green: #30cf4f;
 
     --light-reddish-brown: #D0A590;
     
     --very-light-blue: #eff2f6;
-    --bright-blue:  #b3ecff;
+    --bright-blue: #87c0fa;
     --slate-gray: #7c8c9c;
     --gray: #b3b3b3;
-    --black: #262626;
+    --black: #070101;
 
     --right-answer: #0fA22f;
     --wrong-answer: #d62614;
@@ -25,7 +24,6 @@
     --main-font-bold: 'PT serif bold', Arial;
     --quote-font: 'Kalam', cursive, serif;
 }
-/*End of Variables*/
 
 *,
 *::before,

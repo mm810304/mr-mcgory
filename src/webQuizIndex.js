@@ -182,4 +182,3 @@ nextQuestionBtn.addEventListener('click', getNewQuestion);
 skipQuestionBtn.addEventListener('click', handleSkipQuestion);
 retakeQuizBtn.addEventListener('click', handleRetakeQuiz);
 returnQuizPageBtn.addEventListener('click', () => location.href = 'pizza.html');
-

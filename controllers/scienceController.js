@@ -19,6 +19,10 @@ exports.getSingleLesson = async (req, res, next) => {
         res.render('./pages/demo', {
             activity
         });
+    } else if (activity.type === 'visual') {
+        res.render('./pages/dataVisual', {
+            activity
+        });
     }
 };
 

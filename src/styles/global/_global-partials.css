@@ -1,7 +1,3 @@
-
-
-/*Mid-Page Quotes*/
-
 .quote {
     grid-column: 2 / 6;
     display: flex;
@@ -16,8 +12,6 @@
     text-align: center;   
     margin: 2rem .5rem;
 }
-
-/*Footer*/
 
 .footer {
     background-color: var(--off-white);

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/styles.min.css">
+    <title><%= title %></title>
+</head>
+<body id="trivia__body">
+    <%- include('../partials/homeLinkBlueText') %>
+    <div id="trivia__page">
+        <div class="trivia__setup-container" id="trivia-setup-display">
+
+            <div class="trivia__header">
+                <h2 id="trivia__splash-header-text">Choose a Topic</h2>
+            </div>
+    
+            <div class="trivia__card" id="trivia__topic-splash-page">
+                <form id="trivia__select-topic-form">
+    
+                    <div class="trivia__selection-container" id="trivia__select-topic-container">
+                        
+                        <div class="trivia__selection-radio-container trivia__select-topic-radio-container">
+                            <label for="science-nature" class="trivia__radio-label">Science and Nature</label>
+                            <input type="radio" name="topic" value="17" id="science-nature" class="trivia__selection-radio trivia__select-topic-radio">
+                        </div>
+    
+    
+                        <div class="trivia__selection-radio-container trivia__select-topic-radio-container">
+                            <label for="computers" class="trivia__radio-label">Science: Computers</label>
+                            <input type="radio" name="topic" value="18" id="computers" class="trivia__selection-radio trivia__select-topic-radio">
+                        </div>
+    
+                    </div>
+    
+                    <div class="trivia__selection-footer">
+                        <button class="trivia__button trivia__topic-select-button" type="submit">Select</button>
+                    </div>
+    
+                </form>
+            </div>
+    
+            <div class="trivia__card" id="trivia__level-splash-page" hidden>
+                <form id="trivia__select-level-form">
+    
+                    <div class="trivia__selection-container" id="trivia__select-level-container">
+    
+                        <div class="trivia__selection-radio-container trivia__select-level-radio-container">
+                            <label for="easy" class="trivia__radio-label">Easy</label>
+                            <input type="radio" name="level" value="easy" id="easy" class="trivia__selection-radio">
+                        </div>
+    
+                        <div class="trivia__selection-radio-container trivia__select-level-radio-container">
+                            <label for="medium" class="trivia__radio-label">Medium</label>
+                            <input type="radio" name="level" value="medium" id="medium" class="trivia__selection-radio">
+                        </div>
+    
+                        <div class="trivia__selection-radio-container trivia__select-level-radio-container">
+                            <label for="hard" class="trivia__radio-label">Hard</label>
+                            <input type="radio" name="level" value="hard" id="hard" class="trivia__selection-radio">
+                        </div>
+    
+                    </div>
+    
+                    <div class="trivia__selection-footer">
+                        <button class="trivia__button trivia__level-select-button" type="submit">Select</button>
+                    </div>
+    
+                </form>
+            </div>
+    
+            <div class="trivia__card" id="trivia__amount-splash-page" hidden>
+                <form id="trivia__select-amount-form">
+    
+                    <div class="trivia__selection-container" id="trivia__select-amount-container">
+    
+                        <div class="trivia__selection-radio-container trivia__select-amount-radio-container">
+                            <label for="value-10" class="trivia__radio-label">10</label>
+                            <input type="radio" name="amount" value="10" id="value-10" class="trivia__selection-radio">
+                        </div>
+    
+                        <div class="trivia__selection-radio-container trivia__select-amount-radio-container">
+                            <label for="value-20" class="trivia__radio-label">20</label>
+                            <input type="radio" name="amount" value="20" id="value-20" class="trivia__selection-radio">
+                        </div>
+    
+                        <div class="trivia__selection-radio-container trivia__select-amount-radio-container">
+                            <label for="value-30" class="trivia__radio-label">30</label>
+                            <input type="radio" name="amount" value="30" id="value-30" class="trivia__selection-radio">
+                        </div>
+    
+                    </div>
+    
+                    <div class="trivia__selection-footer">
+                        <button class="trivia__button trivia__amount-select-button" type="submit">Let's Start Already!</button>
+                    </div>
+    
+                </form>
+            </div>
+    
+            <div class="trivia__card" id="trivia__end-splash-page" hidden>
+                <div class="trivia__end-page-container">
+                    <h1 class="trivia__end-page-title">Game Over</h1>
+                    <h2 class="trivia__user-final-score" id="trivia-final-score"></h2>
+                </div>
+    
+                <div class="trivia__end-quiz-btns">
+                    <button class="trivia__button trivia__button-end" id="start-again-btn" type="button">Start Again</button>
+                    <button class="trivia__button trivia__button-end" id="go-home-btn" type="button">Home Page</button>
+                </div>
+    
+            </div>
+
+        </div>
+    
+        <div class="trivia__quiz-container" id="trivia-quiz-display" hidden>
+    
+            <header class="trivia__quiz-header">
+                <h2 class="trivia__quiz-title">Title of the Quiz</h2>
+            </header>
+    
+            <div class="trivia__quiz-box">
+    
+                <div class="trivia__question">
+                    <h2 class="trivia__question-text" id="trivia-question"></h2>
+                </div>
+    
+                <div class="trivia__answers">
+    
+                    <div class="trivia__answer">
+                        <input type="radio" class="trivia__hidden-radio" id="option1" name="answer" value="option1">
+                        <label for="option1" class="trivia__answer-text"><span class="trivia__answer-prefix">A</span><span id="option1-text" class="trivia__option-text">Answer 1</span></label>
+                    </div>
+    
+                    <div class="trivia__answer">
+                        <input type="radio" class="trivia__hidden-radio" id="option2" name="answer" value="option2">
+                        <label for="option2" class="trivia__answer-text"><span class="trivia__answer-prefix">B</span><span id="option2-text" class="trivia__option-text">Answer 2</span></label>
+                    </div>
+    
+                    <div class="trivia__answer">
+                        <input type="radio" class="trivia__hidden-radio" id="option3" name="answer" value="option3">
+                        <label for="option3" class="trivia__answer-text"><span class="trivia__answer-prefix">C</span><span id="option3-text" class="trivia__option-text">Answer 3</span></label>
+                    </div>
+    
+                    <div class="trivia__answer">
+                        <input type="radio" class="trivia__hidden-radio" id="option4" name="answer" value="option4">
+                        <label for="option4" class="trivia__answer-text"><span class="trivia__answer-prefix">D</span><span id="option4-text" class="trivia__option-text">Answer 4</span></label>
+                    </div>
+    
+                </div>
+    
+                <div class="trivia__quiz-buttons">
+                    <button id="check-answer-btn" class="btn btn-border-pop trivia__quiz-btn">Check Answer</button>
+                    <button id="next-question-btn" class="btn btn-border-pop trivia__quiz-btn" hidden>Next Question</button>
+                    <button id="end-quiz-btn" class="btn btn-border-pop trivia__quiz-btn" hidden>Submit Score</button>
+                </div>
+    
+                <div class="trivia__score-container">
+                    <h2 class="trivia__score-text">Current Score:  <span id="trivia-score" class="trivia__score-text"></span></h2>
+                    <p class="trivia__score-explanation">Right Answer = +5 --- Wrong Answer = -3</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="/dist/trivia.bundle.js" type="module"></script>
+</body>
+</html>
