@@ -339,5 +339,5 @@ nextQuestionButton.addEventListener('click', getNewQuestion);
 endQuizButton.addEventListener('click', endQuiz);
 startAgainButton.addEventListener('click', restartTriviaQuiz);
 goHomeButton.addEventListener('click', () => {
-    location.href = 'https://www.mrmcgory.com';
+    location.href = '/';
 });
