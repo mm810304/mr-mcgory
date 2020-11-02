@@ -14,9 +14,27 @@ exports.getTimeKillers = async (req, res, next) => {
 
 exports.getSingleApp = async (req, res, next) => {
     const id = req.params.id;
-    const app = await TimeKillers.findById(id).select('name');
+    const app = await TimeKillers.findById(id);
     
-    res.sendFile(path.join(__dirname, '../public', 'pages', 'timekillers', `${app.name}.html`));
+    if (app.name === 'hangman') {
+        res.render('./pages/timekillers/hangman', {
+            title: app.title,
+            category: app.category,
+            description: app.description,
+        });
+    } else if (app.name === 'sketch') {
+        res.render('./pages/timekillers/sketch', {
+            title: app.title,
+            category: app.category,
+            description: app.description,
+        });
+    } else if (app.name === 'nasa') {
+        res.render('./pages/timekillers/nasa', {
+            title: app.title,
+            category: app.category,
+            description: app.description,
+        });
+    }
 };
 
 exports.getAppName = async (req, res, next) => {
