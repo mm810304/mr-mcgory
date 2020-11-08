@@ -1,0 +1,90 @@
+.philosophy__page-container {
+    margin: 0 auto;
+    height: 100vh;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.philosophy__question-container {
+    width: 75%;
+    padding: 1.2rem;
+}
+
+.philosophy__question {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    animation: text 3s 1;
+}
+
+.philosophy__button {
+    height: 5rem;
+    width: auto;
+    font-size: 2.4rem;
+    padding: 1rem 1.8rem;
+    border-radius: 5px;
+    background: var(--primary-blue);
+    color: var(--off-white);
+    border: none;
+    box-shadow: -3px 5px 8px rgba(121, 121, 121, 0.65);
+    outline: none;
+    cursor: pointer;
+}
+
+.philosophy__button:hover {
+    filter: brightness(110%);
+    background: linear-gradient(90deg, rgba(44,62,80,1), rgba(44,62,80,.5), rgb(44,62,80,1));
+}
+
+.philosophy__button:active {
+    transform: translate(0, 0.3rem);
+    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
+.philosophy__letter-span {
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+span.fade {
+    opacity: 1;
+}
+
+@media (max-width: 900px) {   
+    .philosophy__question-container {
+        width: 90%;
+        padding: 1.2rem;
+    }
+    
+    .philosophy__question {
+        font-size: 4.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .philosophy__button {
+        height: 4.5rem;
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 500px) {   
+    .philosophy__question-container {
+        width: 100%;
+        padding: 1.2rem;
+        margin: 1rem;
+    }
+    
+    .philosophy__question {
+        font-size: 4rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .philosophy__button {
+        height: auto;
+        font-size: 2rem;
+        margin: 1rem;
+    }
+}
+

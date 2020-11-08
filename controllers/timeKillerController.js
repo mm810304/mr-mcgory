@@ -34,6 +34,12 @@ exports.getSingleApp = async (req, res, next) => {
             category: app.category,
             description: app.description,
         });
+    } else if (app.name === 'philosophy') {
+        res.render('./pages/timekillers/philosophy', {
+            title: app.title,
+            category: app.category,
+            description: app.description,
+        });
     }
 };
 
