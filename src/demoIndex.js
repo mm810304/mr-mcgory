@@ -7,7 +7,7 @@ import { RecentEarthquakes } from './activities/modules/recentEarthquakes';
 const id = window.location.pathname.replace('/science/', '');
 
 async function getDemo(id) {
-    const response = await fetch(`https://mrmcgory.com/science/${id}/demo-name`, {
+    const response = await fetch(`http://localhost:5000/science/${id}/demo-name`, {
         headers: {
             Accept: 'application/json'
         }

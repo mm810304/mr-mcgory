@@ -2,7 +2,7 @@ import getWalls from '../demoUtils/walls.js';
 
 export const Gravity = {
     demo() {
-        const questions = ['1. What is gravity?', '2. What happens if gravity is set to zero?', '3. What happens if you turn gravity up as strong as it can go?', '4. The gravity on the moon is less than the gravity on Earth.  What do you think it is like to move on the moon?', '5. What would it be like to move on a planet that had really strong gravity?  Turn the gravity slider all the way up and see how objects moves.'];
+        const questions = ['1. What is gravity?', '2. What happens if gravity is set to zero?', '3. What happens if you turn gravity up as strong as it can go?', '4. The gravity on the moon is less than the gravity on Earth.  What do you think it is like to move on the moon?', '5. What would it be like to move on a planet that had really strong gravity?  Turn the gravity slider all the way up and see how the objects move.'];
 
         let questionIndex = 0;
     
