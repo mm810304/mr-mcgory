@@ -1,7 +1,7 @@
 {
   "name": "mr-mcgory",
   "version": "1.0.0",
-  "description": "Educational website with focus on science and data",
+  "description": "Educational website with focus on science, data, and math.",
   "main": "app.js",
   "scripts": {
     "build:dev": "webpack --watch",

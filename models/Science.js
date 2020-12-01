@@ -23,6 +23,10 @@ const scienceSchema = new mongoose.Schema({
         type: String,
         default: 'default.svg'
     },
+    slug: {
+        type: String,
+        unique: true
+    },
     data: {}
 });
 

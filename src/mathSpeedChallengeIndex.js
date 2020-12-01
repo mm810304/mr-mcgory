@@ -10,7 +10,7 @@ import createDivideIntegersEquations from './math/mathEquations/divideIntegersEq
 const id = window.location.pathname.replace('/math/', '');
 
 async function getMathSpeedChallenge(id) {
-  const response = await fetch(`http://localhost:5000/math/${id}/math-speed-name`, {
+  const response = await fetch(`https://mrmcgory.com/math/${id}/math-speed-name`, {
     headers: {
       Accept: 'application/json'
     }

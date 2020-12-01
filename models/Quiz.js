@@ -8,6 +8,10 @@ const quizSchema = new mongoose.Schema({
         default: 'Science'
     },
     title: String,
+    slug: {
+        type: String,
+        unique: true
+    },
     level: String,
     description: String,
     url: String,

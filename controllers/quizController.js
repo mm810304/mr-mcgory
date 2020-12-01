@@ -11,19 +11,22 @@ exports.getQuizzes = async (req, res, next) => {
 };
 
 exports.getSingleQuiz = async (req, res, next) => {
-    const id = req.params.id;
-    const quiz = await Quiz.findById(id).select('_id title questions');
+    const slugName = req.params.slug;
+    const singleQuiz = await Quiz.find({slug: slugName});
+    const quiz = singleQuiz[0];
 
     res.render('./pages/multiQuiz', {
-        id: quiz._id,
+        quiz,
+        slug: quiz.slug,
         title: quiz.title,
         questions: quiz.questions
     });
 }
 
 exports.getQuizData = async (req, res, next) => {
-    const id = req.params.id;
-    const quizData = await Quiz.findById(id).select('questions');
+    const slugName = req.params.slug;
+    const quizRaw = await Quiz.find({slug: slugName}).select('questions');
+    const quizData = quizRaw[0];
 
     res.json(quizData);
 }

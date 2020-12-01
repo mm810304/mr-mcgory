@@ -4,10 +4,11 @@ import { Friction } from './activities/modules/friction.js';
 import { Gravity } from './activities/modules/gravity.js';
 import { RecentEarthquakes } from './activities/modules/recentEarthquakes';
 
-const id = window.location.pathname.replace('/science/', '');
+const slugName = window.location.pathname.replace('/science/', '');
+console.log(slugName);
 
-async function getDemo(id) {
-    const response = await fetch(`https://mrmcgory.com/science/${id}/demo-name`, {
+async function getDemo(slugName) {
+    const response = await fetch(`https://mrmcgory.com/science/${slugName}/demo-name`, {
         headers: {
             Accept: 'application/json'
         }
@@ -29,6 +30,6 @@ async function getDemo(id) {
 
 };
 
-getDemo(id);
+getDemo(slugName);
 
 

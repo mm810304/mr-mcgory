@@ -17,7 +17,7 @@ const retakeQuizButton = document.querySelector('#retake-quiz-btn');
 const quizHomeButton = document.querySelector('#quiz-home-btn');
 const rightWrongText = document.querySelector('.check-answer-response__text');
 
-const id = window.location.pathname.replace('/quizzes/', '');
+const slugName = window.location.pathname.replace('/quizzes/', '');
 
 let currentQuestion = {};
 let availableQuestions = [];
@@ -26,9 +26,9 @@ let tracker;
 
 let questions = [];
 
-async function getQuestionData(id) {
+async function getQuestionData(slugName) {
     renderLoader(quizContainer);
-    const response = await fetch(`https://mrmcgory.com/quizzes/${id}/quiz-data`, {
+    const response = await fetch(`https://mrmcgory.com/quizzes/${slugName}/quiz-data`, {
         headers: {
             Accept: 'application/json'
         }
@@ -209,4 +209,4 @@ retakeQuizButton.addEventListener('click', () => {
     location.reload(true);
 });
 
-getQuestionData(id);
+getQuestionData(slugName);

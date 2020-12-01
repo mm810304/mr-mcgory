@@ -12,12 +12,13 @@ exports.getScienceLessons = async (req, res, next) => {
 };
 
 exports.getSingleLesson = async (req, res, next) => {
-    const id = req.params.id;
-    const activity = await Science.findById(id);
-
+    const slugName = req.params.slug;
+    const singleActivity = await Science.find({slug: slugName});
+    const activity = singleActivity[0];
     if (activity.type === 'physics-demo') {
         res.render('./pages/demo', {
-            activity
+            activity,
+            slug: activity.slug
         });
     } else if (activity.type === 'visual') {
         res.render('./pages/dataVisual', {
@@ -27,8 +28,9 @@ exports.getSingleLesson = async (req, res, next) => {
 };
 
 exports.getDemoName = async (req, res, next) => {
-    const id = req.params.id;
-    const demoName = await Science.findById(id).select('filename');
+    const slugName = req.params.slug;
+    const demoData = await Science.find({slug: slugName}).select('filename');
+    const demoName = demoData[0];
 
     res.json(demoName);
 };

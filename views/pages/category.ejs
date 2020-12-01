@@ -18,7 +18,7 @@
 
                 <div class="lesson-card-container">
                     <% lessons.forEach(lesson => { %>
-                        <a class="lesson-card-link" href="<%= lesson.url %>/<%= lesson._id %>"><div class="lesson-card">
+                        <a class="lesson-card-link" href="<%= lesson.url %>/<%= lesson.slug %>"><div class="lesson-card">
                             <img src="svg/<%= lesson.image %>" class="lesson-card__image">
                             <div class="lesson-card__text-container">
                                 <% if(lesson.level) { %>
