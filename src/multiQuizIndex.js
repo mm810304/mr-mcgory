@@ -138,7 +138,7 @@ function setRightAnswer() {
     tracker.style.backgroundColor = 'var(--right-answer)';
     currentQuestion.status = 'complete';
 
-    const randNum = randomNumber(positiveFeedback.length - 1);
+    const randNum = randomNumber(positiveFeedback.length);
     rightWrongText.innerText = positiveFeedback[randNum];
 };
 
@@ -151,7 +151,7 @@ function wrongAnswer() {
     tracker = document.querySelector(`#number${questionIndex + 1}`);
     tracker.style.backgroundColor = 'var(--wrong-answer)';
 
-    const randNum = randomNumber(negativeFeedback.length - 1);
+    const randNum = randomNumber(negativeFeedback.length);
     rightWrongText.innerText = negativeFeedback[randNum];
 };
 

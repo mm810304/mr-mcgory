@@ -114,7 +114,7 @@ function setWrongAnswer() {
     skipQuestionBtn.hidden = true;
     nextQuestionBtn.hidden = false;
 
-    const randNum = Math.floor(Math.random() * negativeFeedback.length - 1);
+    const randNum = Math.floor(Math.random() * negativeFeedback.length);
     answerResult.textContent = negativeFeedback[randNum];
 
     correctAnswerHeadingEl.hidden = false;

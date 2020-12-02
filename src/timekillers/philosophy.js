@@ -6,16 +6,19 @@ import { randomNumber } from '../utils/randomNumber';
 const Philosophy = {
     app() {
         const questionText = document.querySelector('.philosophy__question');
-        const newQuestionButton = document.querySelector('.philosophy__button');  
+        const newQuestionButton = document.querySelector('.philosophy__button'); 
+        
+        let stringText = [];
+        let currentQuestion;
         
         const allQuestions = philosophyQuestions;
         
         function getQuestion() {
-            let index = randomNumber(allQuestions.length);
+            let index = randomNumber(allQuestions.length - 1);
 
-            const currentQuestion = allQuestions[index];
-            const stringText = currentQuestion.split('');
-            console.log(stringText);
+            currentQuestion = allQuestions[index];
+            stringText = currentQuestion.split('');
+
             for (let i=0; i < stringText.length; i++) {
                 questionText.innerHTML += `<span class="philosophy__letter-span">${stringText[i]}</span>`
             }
@@ -38,14 +41,18 @@ const Philosophy = {
                 timer = null;
             }
             
-            
-
             allQuestions.splice(index, 1);
         }
 
+        const getNewQuestion = () => {
+            stringText = [];
+            questionText.innerHTML = '';
+            getQuestion();
+        };
+
         getQuestion();
 
-        newQuestionButton.addEventListener('click', getQuestion);
+        newQuestionButton.addEventListener('click', getNewQuestion);
     }
 };
 
