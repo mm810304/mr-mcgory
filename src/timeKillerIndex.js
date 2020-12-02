@@ -5,10 +5,10 @@ import Sketch from './timekillers/sketch.js';
 import Nasa from './timekillers/nasa.js';
 import Philosophy from './timekillers/philosophy.js';
 
-const id = window.location.pathname.replace('/time-killers/', '');
+const slugName = window.location.pathname.replace('/time-killers/', '');
 
-async function getAppName(id) {
-    const response = await fetch(`https://mrmcgory.com/time-killers/${id}/app-name`, {
+async function getAppName(slugName) {
+    const response = await fetch(`https://mrmcgory.com/time-killers/${slugName}/app-name`, {
         headers: {
             Accept: 'application/json'
         }
@@ -27,4 +27,4 @@ async function getAppName(id) {
     }
 }
 
-getAppName(id);
+getAppName(slugName);

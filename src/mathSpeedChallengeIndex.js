@@ -7,10 +7,10 @@ import createAddIntegersEquations from './math/mathEquations/addIntegersEquation
 import createSubtractIntegersEquations from './math/mathEquations/subtractIntegersEquations';
 import createDivideIntegersEquations from './math/mathEquations/divideIntegersEquations';
 
-const id = window.location.pathname.replace('/math/', '');
+const slugName = window.location.pathname.replace('/math/', '');
 
-async function getMathSpeedChallenge(id) {
-  const response = await fetch(`https://mrmcgory.com/math/${id}/math-speed-name`, {
+async function getMathSpeedChallenge(slugName) {
+  const response = await fetch(`https://mrmcgory.com/math/${slugName}/math-speed-name`, {
     headers: {
       Accept: 'application/json'
     }
@@ -36,4 +36,4 @@ async function getMathSpeedChallenge(id) {
   }
 };
 
-getMathSpeedChallenge(id);
+getMathSpeedChallenge(slugName);

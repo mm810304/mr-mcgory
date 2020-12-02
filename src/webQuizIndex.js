@@ -1,5 +1,7 @@
 import '@babel/polyfill';
 
+import { positiveFeedback, negativeFeedback } from './utils/comments';
+
 const questionText = document.getElementById('question-text');
 const textInput = document.getElementById('text-input');
 const answerResult = document.getElementById('answer-result');
@@ -18,15 +20,11 @@ let currentQuestion = {};
 let tracker;
 let hasAnswered = false;
 
-const positiveFeedback = ['That is right!  You genius, you!', 'Woah!  You killed that question!', 'Boom.  Nailed it!', 'You are so smart!  You must have a great teacher!', 'Somebody was paying attention in class!', 'Just great work.  There is nothing more to say.', 'Mr. McGory is proud of you.  And you should appreciate that.'];
-const negativeFeedback = ['No. No. No.', 'Come on!  Were you paying attention in class?', 'What happened?  That is not right.', 'Hmmmm...That does not seem correct.', 'Mr. McGory is shaking his head in disappointment'];
+const slugName = window.location.pathname.replace('/web-development/', '');
 
-//Will need to pass in id as parameter and get id of quiz from window.location.pathname.replace('/.....', ''); to get right data
-const id = window.location.pathname.replace('/web-development/', '');
-
-async function getQuestionData(id) {
+async function getQuestionData(slugName) {
     
-    const res = await fetch(`https://mrmcgory.com/web-development/${id}/web-quiz-data`, {
+    const res = await fetch(`https://mrmcgory.com/web-development/${slugName}/web-quiz-data`, {
         headers: {
             Accept: 'application/json'
         }
@@ -116,7 +114,7 @@ function setWrongAnswer() {
     skipQuestionBtn.hidden = true;
     nextQuestionBtn.hidden = false;
 
-    const randNum = Math.floor(Math.random() * negativeFeedback.length);
+    const randNum = Math.floor(Math.random() * negativeFeedback.length - 1);
     answerResult.textContent = negativeFeedback[randNum];
 
     correctAnswerHeadingEl.hidden = false;
@@ -165,7 +163,7 @@ function handleRetakeQuiz() {
     window.location.reload();
 }
 
-getQuestionData(id);
+getQuestionData(slugName);
 
 //Event Listeners
 checkAnswerBtn.addEventListener('click', getTextInput);

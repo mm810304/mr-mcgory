@@ -50,7 +50,7 @@ app.use('/quizzes', quizRouter);
 app.use('/time-killers', timeKillerRouter);
 app.use('/social-media', socialMediaRouter);
 app.use('/math', mathRouter);
-app.use('/trivia', triviaRouter);
+app.use('/science-trivia', triviaRouter);
 
 app.get('/get-nasa-data', async (req, res, next) => {
     let count = 10;

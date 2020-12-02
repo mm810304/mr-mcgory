@@ -11,18 +11,21 @@ exports.getWebQuizzes = async (req, res, next) => {
 };
 
 exports.getSingleWebQuiz = async (req, res, next) => {
-    const id = req.params.id;
-    const webQuiz = await WebQuiz.findById(id).select('_id title');
+    const slugName = req.params.slug;
+    const webQuizData = await WebQuiz.find({ slug: slugName }).select('_id title');
+    const webQuiz = webQuizData[0];
 
     res.render('./pages/webQuiz', {
         id: webQuiz.id,
-        title: webQuiz.title
+        title: webQuiz.title,
+        slug: webQuiz.slug
     });
 };
 
 exports.getWebQuizData = async (req, res, next) => {
-    const id = req.params.id;
-    const quizData = await WebQuiz.findById(id).select('quizData');
+    const slugName = req.params.slug;
+    const quizDataArray = await WebQuiz.find({ slug: slugName }).select('quizData');
+    const quizData = quizDataArray[0];
 
     res.json(quizData);
 };

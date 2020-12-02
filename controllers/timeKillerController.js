@@ -13,39 +13,45 @@ exports.getTimeKillers = async (req, res, next) => {
 };
 
 exports.getSingleApp = async (req, res, next) => {
-    const id = req.params.id;
-    const app = await TimeKillers.findById(id);
+    const slugName = req.params.slug;
+    const appData = await TimeKillers.find({ slug: slugName });
+    const app = appData[0];
     
     if (app.name === 'hangman') {
         res.render('./pages/timekillers/hangman', {
             title: app.title,
             category: app.category,
             description: app.description,
+            slug: app.slug
         });
     } else if (app.name === 'sketch') {
         res.render('./pages/timekillers/sketch', {
             title: app.title,
             category: app.category,
             description: app.description,
+            slug: app.slug
         });
     } else if (app.name === 'nasa') {
         res.render('./pages/timekillers/nasa', {
             title: app.title,
             category: app.category,
             description: app.description,
+            slug: app.slug
         });
     } else if (app.name === 'philosophy') {
         res.render('./pages/timekillers/philosophy', {
             title: app.title,
             category: app.category,
             description: app.description,
+            slug: app.slug
         });
     }
 };
 
 exports.getAppName = async (req, res, next) => {
-    const id = req.params.id;
-    const appName = await TimeKillers.findById(id).select('name');
+    const slugName = req.params.slug;
+    const appNameData = await TimeKillers.find({ slug: slugName }).select('name');
+    const appName = appNameData[0];
 
     res.json(appName);
 };

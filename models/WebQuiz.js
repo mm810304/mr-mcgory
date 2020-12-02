@@ -11,6 +11,10 @@ const webQuizSchema = new mongoose.Schema({
         default: 'coding.svg'
     },
     level: String,
+    slug: {
+        type: String,
+        unique: true
+    },
     quizData: Array
 });
 

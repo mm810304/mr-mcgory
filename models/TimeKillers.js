@@ -26,6 +26,10 @@ const timeKillerSchema = new mongoose.Schema({
         default: 'default.svg'
     },
     key: String,
+    slug: {
+        type: String,
+        unique: true
+    },
     data: {}
 });
 

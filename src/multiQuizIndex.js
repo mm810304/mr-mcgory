@@ -1,6 +1,8 @@
 import '@babel/polyfill';
 
 import { renderLoader, clearLoader } from './utils/loader.js';
+import { positiveFeedback, negativeFeedback } from './utils/comments';
+import { randomNumber } from './utils/randomNumber';
 
 const question = document.querySelector('#question');
 const quizContainer = document.querySelector('.quiz-container');
@@ -33,6 +35,8 @@ async function getQuestionData(slugName) {
             Accept: 'application/json'
         }
     });
+
+    console.log(positiveFeedback, negativeFeedback);
 
     const quizData = await response.json();
 
@@ -115,7 +119,6 @@ function checkAnswer() {
         return;
     }
 
-
     checkAnswerButton.classList.add('hidden');
     nextQuestionButton.classList.remove('hidden');
 };
@@ -133,8 +136,10 @@ function setRightAnswer() {
     });
     tracker = document.querySelector(`#number${questionIndex + 1}`);
     tracker.style.backgroundColor = 'var(--right-answer)';
-    rightWrongText.innerText = `That's right!  Mr. McGory is proud of you!`;
     currentQuestion.status = 'complete';
+
+    const randNum = randomNumber(positiveFeedback.length - 1);
+    rightWrongText.innerText = positiveFeedback[randNum];
 };
 
 function wrongAnswer() {
@@ -145,7 +150,9 @@ function wrongAnswer() {
     });
     tracker = document.querySelector(`#number${questionIndex + 1}`);
     tracker.style.backgroundColor = 'var(--wrong-answer)';
-    rightWrongText.innerText = `That's incorrect! Were you not paying attention in class?`;
+
+    const randNum = randomNumber(negativeFeedback.length - 1);
+    rightWrongText.innerText = negativeFeedback[randNum];
 };
 
 function endQuiz() {

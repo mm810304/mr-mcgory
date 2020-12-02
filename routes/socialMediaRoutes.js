@@ -4,6 +4,6 @@ const socialMediaController = require('./../controllers/socialMediaController');
 const router = express.Router();
 
 router.get('/', socialMediaController.getSocialMediaLessons);
-router.get('/:id', socialMediaController.getSingleLesson);
+router.get('/:slug', socialMediaController.getSingleLesson);
 
 module.exports = router;

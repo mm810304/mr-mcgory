@@ -21,6 +21,10 @@ const socialMediaSchema = new mongoose.Schema({
         type: String,
         default: 'twitter.svg'
     },
+    slug: {
+        type: String,
+        unique: true
+    },
     link: String
 });
 

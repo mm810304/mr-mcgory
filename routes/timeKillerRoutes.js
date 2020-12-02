@@ -4,7 +4,7 @@ const timeKillerController = require('../controllers/timeKillerController');
 const router = express.Router();
 
 router.get('/', timeKillerController.getTimeKillers);
-router.get('/:id', timeKillerController.getSingleApp);
-router.get('/:id/app-name', timeKillerController.getAppName);
+router.get('/:slug', timeKillerController.getSingleApp);
+router.get('/:slug/app-name', timeKillerController.getAppName);
 
 module.exports = router;

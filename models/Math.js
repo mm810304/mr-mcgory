@@ -15,7 +15,11 @@ const mathSchema = new mongoose.Schema({
     image: {
         type: String,
         default: 'calculator.svg'
-    }
+    },
+    slug: {
+        type: String,
+        unique: true
+    },
 });
 
 const Math = mongoose.model('mathlessons', mathSchema);

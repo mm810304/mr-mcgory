@@ -12,8 +12,9 @@ exports.getSocialMediaLessons = async (req, res, next) => {
 };
 
 exports.getSingleLesson = async (req, res, next) => {
-    const id = req.params.id;
-    const lesson = await SocialMedia.findById(id);
+    const slugName = req.params.slug;
+    const lessonData = await SocialMedia.find({ slug: slugName});
+    const lesson = lessonData[0];
 
     res.render('./pages/socialTwitter', {
         lesson

@@ -11,26 +11,32 @@ exports.getMathLessons = async (req, res, next) => {
 };
 
 exports.getSingleMathLesson = async (req, res, next) => {
-    const id = req.params.id;
-    const mathLesson = await Math.findById(id).select('_id title equations');
+    const slugName = req.params.slug;
+    const mathLessonData = await Math.find({slug: slugName}).select('_id title equations slug');
+    const mathLesson = mathLessonData[0];
 
     res.render('./pages/math-speed-challenge', {
         id: mathLesson._id,
         title: mathLesson.title,
-        equations: mathLesson.equations
+        equations: mathLesson.equations,
+        slug: mathLesson.slug
     });
 };
 
 exports.getEquations = async (req, res, next) => {
-    const id = req.params.id;
-    const equations = await Math.findById(id).select('equations');
+    const slugName = req.params.slug;
+    const equationsData = await Math.find({ slug: slugName }).select('equations');
+    const equations = equationsData[0];
+    console.log('equations', equations)
 
     res.json(equations);
 };
 
 exports.getMathSpeedName = async (req, res, next) => {
-    const id = req.params.id;
-    const mathSpeedName = await Math.findById(id).select('filename');
+    const slugName = req.params.slug;
+    const mathSpeedNameData = await Math.find({ slug: slugName }).select('filename');
+    const mathSpeedName = mathSpeedNameData[0];
+    console.log('math speed name', mathSpeedName);
 
     res.json(mathSpeedName);
 }
